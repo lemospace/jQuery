@@ -1,0 +1,37 @@
+.main {
+    padding: 0 40px;
+
+    .form {
+        display: grid;
+        justify-content: center;
+        position: relative;
+        background: rgba(117, 98, 98, 0.2);
+        color: #000;
+        border-radius: 5%;
+        margin: 50px auto;
+        width: 300px;
+        height: 200px;
+        grid-gap: 5px;
+
+        legend {
+            justify-self: center;
+            padding-top: 10px;
+        }
+
+        label,
+        textarea {
+            width: 280px;
+            justify-self: center;
+        }
+
+        input {
+            margin: 0 10px;
+        }
+
+        button {
+            width: 100px;
+            justify-self: center;
+            margin-bottom: 5px;
+        }
+    }
+}

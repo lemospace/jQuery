@@ -1,0 +1,44 @@
+.main {
+  padding: 0 40px;
+}
+
+.main .form {
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+  background: rgba(117, 98, 98, 0.2);
+  color: #000;
+  border-radius: 5%;
+  margin: 50px auto;
+  width: 300px;
+  height: 200px;
+  grid-gap: 5px;
+}
+
+.main .form legend {
+  -ms-grid-column-align: center;
+      justify-self: center;
+  padding-top: 10px;
+}
+
+.main .form label,
+.main .form textarea {
+  width: 280px;
+  -ms-grid-column-align: center;
+      justify-self: center;
+}
+
+.main .form input {
+  margin: 0 10px;
+}
+
+.main .form button {
+  width: 100px;
+  -ms-grid-column-align: center;
+      justify-self: center;
+  margin-bottom: 5px;
+}
+/*# sourceMappingURL=contact.css.map */

@@ -46,3 +46,16 @@ $(function() {
         return date;
     }
 });
+$(function() {
+    var availableTags = [
+        "Longboard Waves Bambino '26",
+        "Longboard Waves Bamboostick '29",
+        "Longboard Waves Soul Surfer '36",
+        "Longboard Arbor Pilsner Foundation `29",
+        "Longboard Waves Sky Walker '43",
+
+    ];
+    $("#tags").autocomplete({
+        source: availableTags
+    });
+});

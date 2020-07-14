@@ -55,7 +55,9 @@ $(function() {
         "Longboard Waves Sky Walker '43",
 
     ];
+
     $("#tags").autocomplete({
-        source: availableTags
+        source: availableTags,
+        position: { my: "right top", at: "right bottom" }
     });
 });

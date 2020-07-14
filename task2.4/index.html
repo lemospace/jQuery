@@ -2,13 +2,70 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task 2.4.</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="jquery-ui.min.css" />
 </head>
 
 <body>
+    <div class="wrapper">
+        <legend>One-Way Airlines: Let's make a reservation</legend>
 
+        <div class="controlgroup">
+            <p> <label for="date">
+            Pick a departure date <input type="date" id="date" name="date-input"
+          /></label>
+            </p>
+
+            <p> <label for="airport">
+            Find an airport <input type="text" id="airport" name="airport-input"
+          /></label>
+            </p>
+
+
+            <label for="meal-options">
+          Meal options
+          <select id="meal-options">
+            <option>No meal</option>
+            <option>Breakfast</option>
+            <option>Breakfast and Dinner</option>
+          </select></label>
+        </div>
+
+
+        <div class="checkboxradio">
+            <label>
+            Number of bags to check
+            <label for="bag-0" id="bags">0</label>
+            <input type="radio" name="bag-0" id="bag-0" />
+            <label for="bag-1">1</label>
+            <input type="radio" name="bag-0" id="bag-1" />
+            <label for="bag-2">2</label>
+            <input type="radio" name="bag-0" id="bag-2" />
+            </label>
+            <br>
+
+            <label for="aisle">Aisle</label>
+            <input type="checkbox" name="aisle" id="aisle" />
+            <label for="window">Window</label>
+            <input type="checkbox" name="window" id="window" />
+            <label for="exit-row">Exit Row</label>
+            <input type="checkbox" name="exit-row" id="exit-row" />
+            <label for="any">Any seat</label>
+            <input type="checkbox" name="any" id="any" />
+        </div>
+    </div>
+
+
+    <div class="button"><button>Continue recervation process</button></div>
+    </div>
+
+    <script src="js/jquery.js"></script>
+    <script src="js/script.js"></script>
+    <script type="text/javascript" src="js/jquery-ui.min.js"></script>
 </body>
 
 </html>

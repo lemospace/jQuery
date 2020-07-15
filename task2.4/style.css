@@ -1,4 +1,49 @@
-.controlgroup {
-  width: 390px;
+* {
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  font-family: Trebuchet MS, Tahoma, Verdana, Arial, sans-serif;
+  color: #585858;
+  outline: none;
+}
+
+.wrapper {
+  width: 650px;
+  height: 310px;
+  background: #fffbdc;
+  margin: 0 auto;
+}
+
+.form {
+  display: -ms-grid;
+  display: grid;
+  grid-auto-flow: column;
+  -ms-grid-columns: 30% 70%;
+      grid-template-columns: 30% 70%;
+  grid-gap: 5px;
+}
+
+h1 {
+  width: 100%;
+}
+
+.labels {
+  height: 200px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 16% 19% 19% 23% 1fr;
+      grid-template-rows: 16% 19% 19% 23% 1fr;
+  margin-top: 6px;
+}
+
+.labels label {
+  -ms-grid-column-align: end;
+      justify-self: end;
+}
+
+.widgets input,
+.widgets select,
+.widgets label {
+  margin: 5px 0;
 }
 /*# sourceMappingURL=style.css.map */

@@ -12,57 +12,66 @@
 
 <body>
     <div class="wrapper">
-        <legend>One-Way Airlines: Let's make a reservation</legend>
-
-        <div class="controlgroup">
-            <p> <label for="date">
-            Pick a departure date <input type="date" id="date" name="date-input"
-          /></label>
-            </p>
-
-            <p> <label for="airport">
-            Find an airport <input type="text" id="airport" name="airport-input"
-          /></label>
-            </p>
+        <h1>One-Way Airlines: Let's make a reservation</h1>
+        <div class="form">
 
 
-            <label for="meal-options">
-          Meal options
-          <select id="meal-options">
-            <option>No meal</option>
-            <option>Breakfast</option>
-            <option>Breakfast and Dinner</option>
-          </select></label>
-        </div>
+
+            <div class="labels">
+                <label for="datepicker"> Pick a departure date </label>
+                <label for="airport">Find an airport </label>
+                <label for="meal-options">Meal options </label>
+                <label>Number of bags to check </label>
+                <label>Type of seat you'd like</label>
+
+            </div>
+
+            <div class="widgets">
+                <p> <input type="text" id="datepicker" size="20" /></p>
 
 
-        <div class="checkboxradio">
-            <label>
-            Number of bags to check
-            <label for="bag-0" id="bags">0</label>
-            <input type="radio" name="bag-0" id="bag-0" />
-            <label for="bag-1">1</label>
-            <input type="radio" name="bag-0" id="bag-1" />
-            <label for="bag-2">2</label>
-            <input type="radio" name="bag-0" id="bag-2" />
-            </label>
-            <br>
+                <p>
+                    <div class="ui-widget"><input id="airport" size="18" /></div>
+                </p>
 
-            <label for="aisle">Aisle</label>
-            <input type="checkbox" name="aisle" id="aisle" />
-            <label for="window">Window</label>
-            <input type="checkbox" name="window" id="window" />
-            <label for="exit-row">Exit Row</label>
-            <input type="checkbox" name="exit-row" id="exit-row" />
-            <label for="any">Any seat</label>
-            <input type="checkbox" name="any" id="any" />
+
+                <div class="controlgroup">
+                    <select id="meal-options">
+                        <option>No meal</option>
+                        <option>Breakfast</option>
+                        <option>Breakfast and Dinner</option>
+                    </select>
+                </div>
+
+                <div class="checkboxradio">
+                    <label for="bag-0" id="bags">0</label>
+                    <input type="radio" name="bag-0" id="bag-0" />
+                    <label for="bag-1">1</label>
+                    <input type="radio" name="bag-0" id="bag-1" />
+                    <label for="bag-2">2</label>
+                    <input type="radio" name="bag-0" id="bag-2" />
+
+
+                    <br />
+
+
+                    <label for="aisle">Aisle</label>
+                    <input type="checkbox" name="aisle" id="aisle" />
+                    <label for="window">Window</label>
+                    <input type="checkbox" name="window" id="window" />
+                    <label for="exit-row">Exit Row</label>
+                    <input type="checkbox" name="exit-row" id="exit-row" />
+                    <label for="any">Any seat</label>
+                    <input type="checkbox" name="any" id="any" />
+
+                </div>
+
+                <div class="button">
+                    <button>Continue recervation process</button>
+                </div>
+            </div>
         </div>
     </div>
-
-
-    <div class="button"><button>Continue recervation process</button></div>
-    </div>
-
     <script src="js/jquery.js"></script>
     <script src="js/script.js"></script>
     <script type="text/javascript" src="js/jquery-ui.min.js"></script>

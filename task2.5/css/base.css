@@ -1,0 +1,21 @@
+#photo-grid img {
+  width: 100px;
+}
+
+#container {
+  display: -ms-grid;
+  display: grid;
+  margin: 0 auto;
+}
+
+li {
+  list-style-type: none;
+  margin: 5px;
+}
+
+ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+/*# sourceMappingURL=base.css.map */

@@ -1,0 +1,17 @@
+#photo-grid img {
+    width: 100px;
+}
+
+#container {
+    display: grid;
+    margin: 0 auto;
+}
+
+li {
+    list-style-type: none;
+    margin: 5px;
+}
+
+ul {
+    display: flex;
+}

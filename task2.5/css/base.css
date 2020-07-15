@@ -1,5 +1,35 @@
+.wrapper {
+  width: 500px;
+  display: -ms-grid;
+  display: grid;
+  margin: 40px auto;
+}
+
 #photo-grid img {
   width: 100px;
+}
+
+#trash {
+  display: -ms-grid;
+  display: grid;
+  grid-auto-flow: column;
+  -ms-grid-columns: 20% 1fr;
+      grid-template-columns: 20% 1fr;
+  height: 100px;
+  width: 100%;
+  border: 1px solid #000000;
+}
+
+#trash img {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+#trash span {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
 }
 
 #container {
@@ -11,6 +41,10 @@
 li {
   list-style-type: none;
   margin: 5px;
+}
+
+li img {
+  cursor: move;
 }
 
 ul {

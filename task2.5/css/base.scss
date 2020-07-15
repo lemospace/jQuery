@@ -1,5 +1,26 @@
+.wrapper {
+    width: 500px;
+    display: grid;
+    margin: 40px auto;
+}
+
 #photo-grid img {
     width: 100px;
+}
+
+#trash {
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: 20% 1fr;
+    height: 100px;
+    width: 100%;
+    border: 1px solid #000000;
+    img {
+        align-self: center;
+    }
+    span {
+        align-self: center;
+    }
 }
 
 #container {
@@ -10,6 +31,9 @@
 li {
     list-style-type: none;
     margin: 5px;
+    img {
+        cursor: move;
+    }
 }
 
 ul {

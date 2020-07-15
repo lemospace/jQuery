@@ -29,8 +29,4 @@ $(function() {
                 $("<ul />").appendTo($trash);
         });
     }
-    SmokeEffect.imgLocation = "images/epuff.png";
-    SmokeEffect.smokeWidth = 100;
-    SmokeEffect.smokeHeight = 100;
-    SmokeEffect.makeEffect("smokeSpawnPoint", 24, 12);
 });

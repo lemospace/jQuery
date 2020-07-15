@@ -1,27 +1,35 @@
 $(function() {
-    $("#datepicker").datepicker();
-});
-$(function() {
-    var availableTags = ["Kharkiv", "Kyiv", "Odessa", "Lviv"];
-    $("#airport").autocomplete({
-        source: availableTags,
-    });
-});
-$(function() {
-    $(".controlgroup").controlgroup({
-        direction: "vertical",
-    });
-});
 
-$(function() {
-    $(".checkboxradio input").checkboxradio({
-        icon: false,
-    });
-});
+    // There's the gallery and the trash
+    var $gallery = $("#gallery"),
+        $trash = $("#trash");
 
-$(function() {
-    $(".button button").button({
-        icon: "ui-icon-arrowthick-1-e",
-        iconPosition: "end",
+    // Let the gallery items be draggable
+    $("li", $gallery).draggable({
+        cancel: "a.ui-icon", // clicking an icon won't initiate dragging
+        revert: "invalid", // when not dropped, the item will revert back to its initial position
+        containment: "document",
+        helper: "clone",
+        cursor: "move"
     });
+
+    // Let the trash be droppable, accepting the gallery items
+    $trash.droppable({
+        accept: "#gallery > li",
+        classes: {
+            "ui-droppable-active": "ui-state-highlight"
+        },
+        drop: function(event, ui) {
+            deleteImage(ui.draggable);
+        }
+    });
+
+
+
+
+
+
+
+
+
 });

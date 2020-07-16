@@ -18,6 +18,7 @@ $(function() {
         drop: function(event, ui) {
             deleteImage(ui.draggable);
             $("#puff").show();
+            $("#puff").hide(2000);
         },
     });
 

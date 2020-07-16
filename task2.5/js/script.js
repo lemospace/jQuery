@@ -30,3 +30,8 @@ $(function() {
         });
     }
 });
+
+$(function() {
+    $("#rainbow").sortable();
+    $("#rainbow").disableSelection();
+});

@@ -52,4 +52,80 @@ ul {
   display: -ms-flexbox;
   display: flex;
 }
+
+.puff {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  height: calc(622px / 5);
+  width: 128px;
+  background: url(images/epuff.png);
+  -webkit-animation: animate 1s steps(5) infinite;
+          animation: animate 1s steps(5) infinite;
+}
+
+@-webkit-keyframes animate {
+  from {
+    background-position: 0;
+  }
+  to {
+    background-position: -622px;
+  }
+}
+
+@keyframes animate {
+  from {
+    background-position: 0;
+  }
+  to {
+    background-position: -622px;
+  }
+}
+
+.rainbow-container ul {
+  padding: 0;
+  margin: 0 auto;
+  border: 1px solid #3c13f3;
+  width: 500px;
+  display: -ms-grid;
+  display: grid;
+  grid-auto-flow: row;
+}
+
+.rainbow-container ul li {
+  height: 50px;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.rainbow-container ul .green {
+  background: #5ddb63;
+}
+
+.rainbow-container ul .blue {
+  background: #5e9add;
+}
+
+.rainbow-container ul .orange {
+  background: #fca636;
+}
+
+.rainbow-container ul .violet {
+  background: #eb58f8;
+}
+
+.rainbow-container ul .yellow {
+  background: #fce943;
+}
+
+.rainbow-container ul .red {
+  background: #f83c2f;
+}
+
+.rainbow-container ul .light-blue {
+  background: #4df8f8;
+}
 /*# sourceMappingURL=base.css.map */

@@ -10,26 +10,27 @@
 }
 
 #trash {
+  overflow: hidden;
   display: -ms-grid;
   display: grid;
   grid-auto-flow: column;
-  -ms-grid-columns: 20% 1fr;
-      grid-template-columns: 20% 1fr;
-  height: 100px;
+  height: 150px;
   width: 100%;
   border: 1px solid #000000;
+  -ms-flex-line-pack: center;
+      align-content: center;
 }
 
 #trash img {
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
+  width: 70px;
+  margin-top: 40px;
+  margin-left: 20px;
 }
 
 #trash span {
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 #container {
@@ -53,34 +54,31 @@ ul {
   display: flex;
 }
 
-.puff {
+#puff {
+  display: none;
   position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
   height: calc(622px / 5);
   width: 128px;
-  background: url(images/epuff.png);
-  -webkit-animation: animate 1s steps(5) infinite;
-          animation: animate 1s steps(5) infinite;
+  background-image: url(../images/epuff.png);
+  -webkit-animation: puff 0.8s steps(5) backwards;
+          animation: puff 0.8s steps(5) backwards;
 }
 
-@-webkit-keyframes animate {
+@-webkit-keyframes puff {
   from {
-    background-position: 0;
+    background-position-y: 0;
   }
   to {
-    background-position: -622px;
+    background-position-y: -622px;
   }
 }
 
-@keyframes animate {
+@keyframes puff {
   from {
-    background-position: 0;
+    background-position-y: 0;
   }
   to {
-    background-position: -622px;
+    background-position-y: -622px;
   }
 }
 

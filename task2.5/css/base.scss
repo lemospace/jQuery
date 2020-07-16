@@ -9,17 +9,20 @@
 }
 
 #trash {
+    overflow: hidden;
     display: grid;
     grid-auto-flow: column;
-    grid-template-columns: 20% 1fr;
-    height: 100px;
+    height: 150px;
     width: 100%;
     border: 1px solid #000000;
+    align-content: center;
     img {
-        align-self: center;
+        width: 70px;
+        margin-top: 40px;
+        margin-left: 20px;
     }
     span {
-        align-self: center;
+        align-items: center;
     }
 }
 
@@ -40,23 +43,21 @@ ul {
     display: flex;
 }
 
-.puff {
+#puff {
+    display: none;
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     height: calc(622px / 5);
     width: 128px;
-    background: url(images/epuff.png);
-    animation: animate 1s steps(5) infinite;
+    background-image: url(../images/epuff.png);
+    animation: puff 0.8s steps(5) backwards;
 }
 
-@keyframes animate {
+@keyframes puff {
     from {
-        background-position: 0;
+        background-position-y: 0;
     }
     to {
-        background-position: -622px;
+        background-position-y: -622px;
     }
 }
 

@@ -1,0 +1,40 @@
+.main {
+    padding: 0 40px;
+
+    p {
+        text-align: justify;
+        padding-bottom: 20px;
+    }
+
+    .map-responsive {
+        margin: 0 auto;
+        overflow: hidden;
+        padding-bottom: 27%;
+        position: relative;
+        height: 0;
+    }
+
+    .map-responsive iframe {
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        position: absolute;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .main {
+        .map-responsive iframe {
+            height: 90%;
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .main {
+        .map-responsive iframe {
+            height: 100%;
+        }
+    }
+}

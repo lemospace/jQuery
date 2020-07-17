@@ -1,0 +1,100 @@
+.wrapper {
+    width: 500px;
+    display: grid;
+    margin: 40px auto;
+}
+
+#photo-grid img {
+    width: 100px;
+}
+
+#trash {
+    overflow: hidden;
+    display: grid;
+    grid-auto-flow: column;
+    height: 150px;
+    width: 100%;
+    border: 1px solid #000000;
+    align-content: center;
+    img {
+        width: 70px;
+        margin-top: 40px;
+        margin-left: 20px;
+    }
+    span {
+        align-items: center;
+    }
+}
+
+#container {
+    display: grid;
+    margin: 0 auto;
+}
+
+li {
+    list-style-type: none;
+    margin: 5px;
+    img {
+        cursor: move;
+    }
+}
+
+ul {
+    display: flex;
+}
+
+#puff {
+    display: none;
+    position: absolute;
+    height: calc(622px / 5);
+    width: 128px;
+    background-image: url(../images/epuff.png);
+    animation: puff 0.8s steps(5) backwards;
+}
+
+@keyframes puff {
+    from {
+        background-position-y: 0;
+    }
+    to {
+        background-position-y: -622px;
+    }
+}
+
+.rainbow-container {
+    ul {
+        padding: 0;
+        margin: 0 auto;
+        border: 1px solid #3c13f3;
+        width: 500px;
+        display: grid;
+        grid-auto-flow: row;
+        li {
+            height: 50px;
+            width: 100%;
+            margin: 0;
+            padding: 0;
+        }
+        .green {
+            background: rgb(93, 219, 99);
+        }
+        .blue {
+            background: rgb(94, 154, 221);
+        }
+        .orange {
+            background: rgb(252, 166, 54);
+        }
+        .violet {
+            background: rgb(235, 88, 248);
+        }
+        .yellow {
+            background: rgb(252, 233, 67);
+        }
+        .red {
+            background: rgb(248, 60, 47);
+        }
+        .light-blue {
+            background: rgb(77, 248, 248);
+        }
+    }
+}

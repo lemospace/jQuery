@@ -1,46 +1,62 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-<meta charset="UTF-8">
-<title>Flickr Feed</title>
+    <meta charset="UTF-8">
+    <title>Flickr Feed</title>
 
-<style>
-.image {
-	float: left;
-	padding: 10px;
-	border: solid 1px rgb(27,45,94);
-	background-color: white;
-	margin: 0 30px 30px 0;
-}
-.image:hover {
-	border-color: red;
-	background-color: rgb(204,204,204);	
-}
-</style>
+    <style>
+        .image {
+            float: left;
+            padding: 10px;
+            border: solid 1px rgb(27, 45, 94);
+            background-color: white;
+            margin: 0 30px 30px 0;
+        }
+        
+        .image:hover {
+            border-color: red;
+            background-color: rgb(204, 204, 204);
+        }
+    </style>
 
-<!-- Put jQuery here -->
-<script src=""></script>
-<script>
-$(document).ready(function() {
-			
-}); // end ready
-</script>
+    <!-- Put jQuery here -->
+    <script src="jquery.js"></script>
+    <script>
+        $(document).ready(function() {
+            var flickrApiUrl = "https://api.flickr.com/services/feeds/photos_public.gne?jsoncallback=?";
+
+            $.getJSON(flickrApiUrl, {
+                id: "189394178@N06",
+                format: "json"
+            }).done(function(data) {
+                console.log(data);
+                $.each(data.items, function(index, item) {
+                    $("<img>").attr("src", item.media.m).appendTo("#photos");
+                });
+            });
+
+        }); // end ready
+    </script>
 </head>
+
 <body>
-<div class="wrapper">
-	<header>
-    Flickr Gallery
-</header>
-	<div class="content">
-		<div class="main">
-			<h1>Flickr Images</h1>
-		<div id="photos"></div>
-        <br class="clearLeft">
-		</div>
-	</div>
-	<footer>
-    
-</footer>
-</div>
+    <div class="wrapper">
+        <header>
+            Flickr Gallery
+        </header>
+        <div class="content">
+            <div class="main">
+                <h1>Flickr Images</h1>
+                <div id="photos"></div>
+                <br class="clear-left">
+            </div>
+        </div>
+        <footer>
+
+        </footer>
+    </div>
+
 </body>
+
 </html>

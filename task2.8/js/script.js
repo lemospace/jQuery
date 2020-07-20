@@ -43,7 +43,7 @@ $(function() {
             $("#email-error").html("Invalid email address").css("color", "#F90A0A");
             $("#email-error").show();
             $("#email").css("border-bottom", "2px solid #F90A0A");
-            error_name = true;
+            error_email = true;
         }
     }
 
@@ -83,20 +83,26 @@ $(function() {
 $(document).ready(function() {
     $("#name").keyup(function() {
         var name = $("#name").val();
-        $.post("data.php", {
-            data: name,
-        });
+        if (pattern.test(name) && name !== "") {
+            $.post("data.php", {
+                data: name,
+            });
+        }
     });
     $("#email").keyup(function() {
         var email = $("#email").val();
-        $.post("data.php", {
-            data: email,
-        });
+        if (pattern.test(email) && email !== "") {
+            $.post("data.php", {
+                data: email,
+            });
+        }
     });
     $("#comm").keyup(function() {
         var comm = $("#comm").val();
-        $.post("data.php", {
-            data: comm,
-        });
+        if (pattern.test(comm) && comm !== "") {
+            $.post("data.php", {
+                data: email,
+            });
+        }
     });
 });

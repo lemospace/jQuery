@@ -87,4 +87,16 @@ $(document).ready(function() {
             data: name,
         });
     });
+    $("#email").keyup(function() {
+        var email = $("#email").val();
+        $.post("data.php", {
+            data: email,
+        });
+    });
+    $("#comm").keyup(function() {
+        var comm = $("#comm").val();
+        $.post("data.php", {
+            data: comm,
+        });
+    });
 });

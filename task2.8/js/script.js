@@ -82,6 +82,7 @@ $(function() {
 
 $(document).ready(function() {
     $("#name").keyup(function() {
+        var pattern = /^[a-zA-Z]*$/;
         var name = $("#name").val();
         if (pattern.test(name) && name !== "") {
             $.post("data.php", {
@@ -90,6 +91,7 @@ $(document).ready(function() {
         }
     });
     $("#email").keyup(function() {
+        var pattern = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
         var email = $("#email").val();
         if (pattern.test(email) && email !== "") {
             $.post("data.php", {
@@ -99,9 +101,10 @@ $(document).ready(function() {
     });
     $("#comm").keyup(function() {
         var comm = $("#comm").val();
-        if (pattern.test(comm) && comm !== "") {
+        var comm_length = $("#comm").val().length;
+        if (comm_length > 20) {
             $.post("data.php", {
-                data: email,
+                data: comm,
             });
         }
     });

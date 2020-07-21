@@ -71,8 +71,9 @@ $(function() {
         check_comm();
 
         if (error_name === false && error_email === false && error_comm === false) {
-            $.post("data.php", {});
-            alert("Your feedback has been successfully sent!");
+            $.post("data.php", function() {
+                alert("Your feedback has been successfully sent!");
+            });
 
             return true;
         } else {

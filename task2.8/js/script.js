@@ -71,7 +71,9 @@ $(function() {
         check_comm();
 
         if (error_name === false && error_email === false && error_comm === false) {
+            $.post("data.php", {});
             alert("Your feedback has been successfully sent!");
+
             return true;
         } else {
             alert("Please fill the form correctly");
@@ -79,7 +81,7 @@ $(function() {
         }
     });
 });
-
+/*
 $(document).ready(function() {
     $("#name").keyup(function() {
         var pattern = /^[a-zA-Z]*$/;
@@ -108,4 +110,4 @@ $(document).ready(function() {
             });
         }
     });
-});
+});*/

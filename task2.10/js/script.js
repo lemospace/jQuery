@@ -28,13 +28,16 @@ $(".txtb").on("keyup", function(e) {
         revert: "invalid",
         cursor: "move",
     });
-    $("#comp").droppable({
-        accept: "#notcomp > task",
+    $(".comp").droppable({
+        accept: task,
 
         drop: function(event, ui) {
-            var p = $(this).parent();
-            $(this).append(p);
-            p.fadeIn();
+            $(this).fadeIn(function() {
+                $(".comp").append(task);
+                task.fadeIn();
+            });
+            $(check).remove();
+            $(this).find(task);
         },
     });
 });

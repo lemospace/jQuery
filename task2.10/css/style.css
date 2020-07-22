@@ -40,6 +40,10 @@ body {
   cursor: pointer;
 }
 
+.container .comp {
+  min-height: 100px;
+}
+
 .container .comp .task {
   background: rgba(0, 0, 0, 0.5);
   color: #ffffff;

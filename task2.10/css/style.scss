@@ -2,5 +2,42 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: 'Courier New', Courier, monospace;
+    font-family: 'montserrat', sans-serif;
+}
+
+body {
+    background-image: linear-gradient(120deg, #786fa6, #f3a683);
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 800px;
+    margin: auto;
+    padding: 10px;
+    .txtb {
+        width: 100%;
+        border: none;
+        border-bottom: 2px solid #000;
+        padding: 10px;
+        background: none;
+        outline: none;
+    }
+    .task {
+        width: 100%;
+        background: rgba(255, 255, 255, 0.5);
+        padding: 18px;
+        margin: 6px 0;
+        overflow: hidden;
+        i {
+            float: right;
+            margin-left: 20px;
+            cursor: pointer;
+        }
+    }
+    .comp {
+        .task {
+            background: rgba(0, 0, 0, 0.5);
+            color: #ffffff;
+        }
+    }
 }

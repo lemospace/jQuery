@@ -22,23 +22,19 @@ $(".txtb").on("keyup", function(e) {
         //to clear the input
         $(".txtb").val("");
     }
-});
 
-$(function() {
-    // There's the gallery and the trash
-    var $notcomp = $("#notcomp");
-    var $comp = $("#comp");
-    var task = $('<li class="task" id="task"> </li> ');
-
-    // Let the gallery items be draggable
-    task.draggable({
-        revert: "invalid", // when not dropped, the item will revert back to its initial position
-        containment: "document",
+    // drug & drop
+    $(task).draggable({
+        revert: "invalid",
         cursor: "move",
     });
-
-    // Let the trash be droppable, accepting the gallery items
-    $comp.droppable({
+    $("#comp").droppable({
         accept: "#notcomp > task",
+
+        drop: function(event, ui) {
+            var p = $(this).parent();
+            $(this).append(p);
+            p.fadeIn();
+        },
     });
 });

@@ -3,7 +3,7 @@ $(".txtb").on("keyup", function(e) {
     if (e.keyCode == 13 && $(".txtb").val() != "") {
         var task = $('<li class="task" id="task"> </li> ').text($(".txtb").val());
         var del = $('<i class="fas fa-trash-alt"></i>').click(function() {
-            var p = $(this).parent();
+            var p = $("#notcomp");
             p.fadeOut(function() {
                 p.remove();
             });
@@ -28,7 +28,7 @@ $(".txtb").on("keyup", function(e) {
         revert: "invalid",
         cursor: "move",
     });
-    $(".comp").droppable({
+    $("#comp").droppable({
         accept: task,
 
         drop: function(event, ui) {

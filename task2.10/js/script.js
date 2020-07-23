@@ -34,8 +34,9 @@ $(document).ready(function() {
         axis: "y",
         cursor: "move",
         connectWith: "#notcomp",
-    });
-    $("#comp").sortable(function() {
-        $('<i class="fas fa-check"></i>').remove();
+
+        sort: function(event, ui) {
+            $('<i class="fas fa-check"></i>').remove();
+        },
     });
 });

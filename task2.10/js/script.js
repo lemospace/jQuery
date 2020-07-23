@@ -40,6 +40,5 @@ $(document).ready(function() {
     $("#comp").sortable({
         axis: "y",
         cursor: "move",
-        connectWith: "#notcomp",
     });
 });

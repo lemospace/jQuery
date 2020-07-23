@@ -1,7 +1,7 @@
 $(".txtb").on("keyup", function(e) {
     // 13 это кнопка enter
     if (e.keyCode == 13 && $(".txtb").val() != "") {
-        var task = $('<li class="task" id="task"> </li> ').text($(".txtb").val());
+        var task = $('<li class="task"> </li> ').text($(".txtb").val());
         var del = $('<i class="fas fa-trash-alt"></i>').click(function() {
             var p = $("#notcomp");
             p.fadeOut(function() {
@@ -22,22 +22,33 @@ $(".txtb").on("keyup", function(e) {
         //to clear the input
         $(".txtb").val("");
     }
-
-    // drug & drop
-    $(task).draggable({
+    $(".task").draggable({
         revert: "invalid",
         cursor: "move",
+        snap: ".task",
     });
-    $("#comp").droppable({
-        accept: task,
-
+    $(".comp").droppable({
+        accept: ".task",
         drop: function(event, ui) {
-            $(this).fadeIn(function() {
-                $(".comp").append(task);
-                task.fadeIn();
-            });
-            $(check).remove();
-            $(this).find(task);
+            console.log(ui.draggable);
         },
     });
+    /*
+                            // drug & drop
+                            $(task).draggable({
+                                revert: "invalid",
+                                cursor: "move",
+                            });
+                            $("#comp").droppable({
+                                accept: task,
+
+                                drop: function(event, ui) {
+                                    $(this).fadeIn(function() {
+                                        $(".comp").append(task);
+                                        task.fadeIn();
+                                    });
+                                    $(check).remove();
+                                    $(this).find(task);
+                                },
+                            });*/
 });

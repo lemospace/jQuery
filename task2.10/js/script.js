@@ -23,24 +23,6 @@ $(".txtb").on("keyup", function(e) {
         $(".txtb").val("");
     }
 });
-/*
-$(function(e) {
-    var $notcomp = $("#notcomp"),
-        $comp = $("#comp");
-    $(".task", $notcomp).draggable({
-        revert: "invalid",
-        cursor: "move",
-    });
-    $comp.droppable({
-        accept: "#notcomp > li",
-        revert: "invalid",
-        drop: function(event, ui) {
-            console.log(ui.draggable);
-            $('<i class="fas fa-check"></i>').remove();
-            $comp.append(li);
-        },
-    });
-}); */
 
 $(document).ready(function() {
     $("#notcomp").sortable({

@@ -22,34 +22,38 @@ $(".txtb").on("keyup", function(e) {
         //to clear the input
         $(".txtb").val("");
     }
-    $(task).draggable({
+});
+/*
+$(function(e) {
+    var $notcomp = $("#notcomp"),
+        $comp = $("#comp");
+    $(".task", $notcomp).draggable({
         revert: "invalid",
         cursor: "move",
     });
-    $(".comp").droppable({
-        accept: task,
+    $comp.droppable({
+        accept: "#notcomp > li",
+        revert: "invalid",
         drop: function(event, ui) {
             console.log(ui.draggable);
-            $(check).remove();
-            $(this).append(task);
+            $('<i class="fas fa-check"></i>').remove();
+            $comp.append(li);
         },
     });
-    /*
-                                                        // drug & drop
-                                                        $(task).draggable({
-                                                            revert: "invalid",
-                                                            cursor: "move",
-                                                        });
-                                                        $("#comp").droppable({
-                                                            accept: task,
+}); */
 
-                                                            drop: function(event, ui) {
-                                                                $(this).fadeIn(function() {
-                                                                    $(".comp").append(task);
-                                                                    task.fadeIn();
-                                                                });
-                                                                $(check).remove();
-                                                                $(this).find(task);
-                                                            },
-                                                        });*/
+$(document).ready(function() {
+    $("#notcomp").sortable({
+        axis: "y",
+        cursor: "move",
+        connectWith: "#comp",
+    });
+    $("#comp").sortable({
+        axis: "y",
+        cursor: "move",
+        connectWith: "#notcomp",
+    });
+    $("#comp").sortable(function() {
+        $('<i class="fas fa-check"></i>').remove();
+    });
 });

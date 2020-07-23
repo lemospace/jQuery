@@ -26,8 +26,12 @@ body {
         width: 100%;
         background: rgba(255, 255, 255, 0.5);
         padding: 18px;
-        margin: 6px 0;
+        margin: 6px auto;
         overflow: hidden;
+        position: relative;
+        top: 0px;
+        left: 0px;
+        display: list-item;
         i {
             float: right;
             margin-left: 20px;

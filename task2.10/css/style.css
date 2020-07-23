@@ -53,4 +53,9 @@ body {
   background: rgba(0, 0, 0, 0.5);
   color: #ffffff;
 }
+
+.container #notcomp {
+  min-height: 50px;
+  max-width: 100%;
+}
 /*# sourceMappingURL=style.css.map */

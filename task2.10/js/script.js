@@ -3,7 +3,7 @@ $(".txtb").on("keyup", function(e) {
     if (e.keyCode == 13 && $(".txtb").val() != "") {
         var task = $('<li class="task"> </li> ').text($(".txtb").val());
         var del = $('<i class="fas fa-trash-alt"></i>').click(function() {
-            var p = $("#notcomp");
+            var p = $(this).parent();
             p.fadeOut(function() {
                 p.remove();
             });
@@ -22,33 +22,34 @@ $(".txtb").on("keyup", function(e) {
         //to clear the input
         $(".txtb").val("");
     }
-    $(".task").draggable({
+    $(task).draggable({
         revert: "invalid",
         cursor: "move",
-        snap: ".task",
     });
     $(".comp").droppable({
-        accept: ".task",
+        accept: task,
         drop: function(event, ui) {
             console.log(ui.draggable);
+            $(check).remove();
+            $(this).append(task);
         },
     });
     /*
-                            // drug & drop
-                            $(task).draggable({
-                                revert: "invalid",
-                                cursor: "move",
-                            });
-                            $("#comp").droppable({
-                                accept: task,
+                                                        // drug & drop
+                                                        $(task).draggable({
+                                                            revert: "invalid",
+                                                            cursor: "move",
+                                                        });
+                                                        $("#comp").droppable({
+                                                            accept: task,
 
-                                drop: function(event, ui) {
-                                    $(this).fadeIn(function() {
-                                        $(".comp").append(task);
-                                        task.fadeIn();
-                                    });
-                                    $(check).remove();
-                                    $(this).find(task);
-                                },
-                            });*/
+                                                            drop: function(event, ui) {
+                                                                $(this).fadeIn(function() {
+                                                                    $(".comp").append(task);
+                                                                    task.fadeIn();
+                                                                });
+                                                                $(check).remove();
+                                                                $(this).find(task);
+                                                            },
+                                                        });*/
 });

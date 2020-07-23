@@ -41,7 +41,8 @@ body {
 }
 
 .container #comp {
-  min-height: 60px;
+  min-height: 300px;
+  max-width: 100%;
 }
 
 .container #comp .task {

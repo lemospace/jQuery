@@ -8,7 +8,7 @@ $(".txtb").on("keyup", function(e) {
                 p.remove();
             });
         });
-        var check = $('<i id="check" class="fas fa-check"></i>').click(function() {
+        var check = $('<i  class="fas fa-check"></i>').click(function() {
             var p = $(this).parent();
             p.fadeOut(function() {
                 $(".comp").append(p);
@@ -30,11 +30,7 @@ $(document).ready(function() {
         cursor: "move",
         connectWith: "#comp",
         update: function(event, ui) {
-            $("#comp")
-                .children()
-                .not(function(icon) {
-                    $("#check").remove();
-                });
+            $("#comp .fa-check").remove();
         },
     });
     $("#comp").sortable({

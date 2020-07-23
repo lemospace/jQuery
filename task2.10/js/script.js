@@ -30,7 +30,7 @@ $(document).ready(function() {
         cursor: "move",
         connectWith: "#comp",
         update: function(event, ui) {
-            $("li")
+            $("#comp")
                 .children()
                 .not(function(icon) {
                     $("#check").remove();

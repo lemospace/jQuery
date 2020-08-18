@@ -1,5 +1,4 @@
 $(function() {
-
     // There's the gallery and the trash
     var $gallery = $("#gallery"),
         $trash = $("#trash");
@@ -9,27 +8,33 @@ $(function() {
         cancel: "a.ui-icon", // clicking an icon won't initiate dragging
         revert: "invalid", // when not dropped, the item will revert back to its initial position
         containment: "document",
-        helper: "clone",
-        cursor: "move"
+        cursor: "move",
     });
 
     // Let the trash be droppable, accepting the gallery items
     $trash.droppable({
         accept: "#gallery > li",
-        classes: {
-            "ui-droppable-active": "ui-state-highlight"
-        },
+
         drop: function(event, ui) {
             deleteImage(ui.draggable);
-        }
+
+            $("#puff").show();
+            $("#puff").delay(790).hide(0);
+        },
     });
 
+    // Image deletion function
 
+    function deleteImage($item) {
+        $item.fadeOut(function() {
+            var $list = $("ul", $trash).length ?
+                $("ul", $trash) :
+                $("<ul />").appendTo($trash);
+        });
+    }
+});
 
-
-
-
-
-
-
+$(function() {
+    $("#rainbow").sortable();
+    $("#rainbow").disableSelection();
 });
